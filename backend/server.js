@@ -1,22 +1,27 @@
 const express = require('express');
-const notes = require('./data/notes');
-const dotenv=require('dotenv')
-
+const kitchen = require('./data/kitchen');
+const dotenv = require('dotenv')
+const connectDB = require("./config/db")
+const userRoutes=require('./routes/userRoutes');
+const kitchenRoutes=require('./routes/kitchenRoutes');
+const { notFound, errorHandler } = require('./middlewares/errorMiddleware');
 const app = express();
 dotenv.config();
+connectDB();
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('API is running');
 });
 
-app.get('/api/notes', (req, res) => {
-    res.json(notes);
-});
+//app.get('/api/kitchen', (req, res) => {
+ //  res.json(protect,kitchen);
+//});
 
-app.get('/api/notes/:id/', (req, res) => {
-    const note = notes.find((n) => n._id === req.params.id);
-    res.send(note);
-});
+app.use('/api/users', userRoutes);
+
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 9999;
 
