@@ -1,0 +1,249 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar  */
+
+    #navbar{
+        display: flex;
+    position: sticky;
+    top: 0px;
+    font-family: 'Baloo 2', cursive;
+    align-items: center;
+}
+
+/* Logo Styling */
+#logo{
+    margin: 1px 6px;
+}
+#logo img{
+    height: 80px;
+}
+
+/* List styling */
+#navbar ul{
+    display: flex;
+}
+#navbar ul li {
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 30px;
+}
+#navbar ul li a {
+    display: block;
+    border-radius: 12px;
+    color: white;
+   text-decoration: none;
+   padding: 2px 2px;
+}
+#navbar ul li a:hover {
+   color: black;
+   background-color: white; 
+}
+#navbar::before{
+    content: " ";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+
+}
+#navbar{
+    position: relative;
+}
+
+/* Home Section */
+#home{
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    height: 417px;
+    flex-direction: column;
+    padding: 86px;
+    align-items: center;
+    justify-content: center;
+}
+#home::before{
+    content: " ";
+   background: url('bg1.jpg') no-repeat center center/cover;
+   position:absolute;
+   height: 100%;
+   width: 100%;
+   top: 0%;
+   z-index: -1;
+   opacity: 0.89;
+}
+
+#home h1{
+color: white;
+text-align: center;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Services section */
+#services{
+    font-family: 'Baloo 2', cursive;
+    margin: 34px;
+    display: flex;
+   
+}
+#services .box img{
+    height: 80px;
+    display: block;
+    margin: auto;
+}
+#services .box{
+border: 2px solid brown;
+    margin: -12px 3px;
+    padding: 14px 25px;
+    border-radius: 23px;
+    background-color: rgb(197, 189, 191);
+}
+#services .box p{
+    text-align: center;
+}
+#aboutsection {
+    display: flex;
+}
+#aboutsection .about{
+    padding: 100px;
+    border: 0px ;
+   border-radius: 50px;
+   background-color: rgb(197, 189, 191);
+}
+#aboutsection .aboutimg{
+    padding: 0px 100px
+}
+/* Clients section */
+/* #clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clientsection::before{
+    content: "";
+    position: absolute;
+   background: url('bgforclient.jpg') no-repeat center center/cover;
+   height: 40%;
+   width: 100%;
+   z-index: -1;
+   opacity: 0.4;
+}
+.clientitems{
+    padding: 34px;
+}
+#clients img{
+    height: 130px;
+}
+.cheftxt {
+    text-align: center;
+}
+ h2{
+ color: rgb(12, 12, 12);
+ } */
+/* Form section */
+
+/* .contact{
+    position: relative;
+}
+.contact::before{
+    content: "";
+    position:absolute;
+    background: url('form.jpg') no-repeat center center/cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+
+}
+.contactbox{
+    display: flex;
+     align-items: center;
+    justify-content: center;
+     padding-bottom: 34px;
+}
+.contactbox form {
+    width: 50%;
+}
+.contactbox input, 
+.contactbox textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}  */
+label{
+    font-size: 20px;
+
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 2px 2px;
+}
+
+
+/* utility classes */
+.hprimary{
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.8rem;
+    padding: 10px;
+}
+.lbtn{
+    float: right;
+    
+}
+.lbtn:hover
+{
+    background-color: black;
+}
+.btn{
+    order: 2px solid black;
+    color: white;
+    background-color: crimson;
+    border-radius: 26px;
+    margin: 8px;
+    padding: 4px 4px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    
+
+}
+.btn:hover{
+    background-color: black;
+}
+.centre{
+    text-align: center;
+}
+.hsecondary{
+    font-size: 2.8rem;
+}
+#ContactUs{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('form.jpg') no-repeat center center/cover;
+}
+.form-shape input, .form-shape select, .form-shape textarea{
+   width: 92%;
+   padding: 0.5rem;
+}
+/*Changing the color of placeholder*/
+::placeholder{                  
+    color:gray;
+}
